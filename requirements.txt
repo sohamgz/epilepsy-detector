@@ -4,4 +4,4 @@ numpy
 scikit-learn
 joblib
 matplotlib
-shap
+shap==0.41.0
