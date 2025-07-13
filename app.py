@@ -27,24 +27,19 @@ if uploaded_file is not None:
         data = pd.read_csv(uploaded_file, header=None)
 
         if data.shape == (1, 179):
-            proba = model.predict_proba(data)[0]
-            prediction = np.argmax(proba)
-
+            prediction = model.predict(data)[0]
             result = "⚠️ Seizure Detected" if prediction == 1 else "✅ No Seizure"
             st.subheader("Prediction Result:")
             st.success(result)
 
-            # Show confidence
-            st.subheader("Confidence Score:")
-            st.write(f"Seizure: `{proba[1]*100:.2f}%`, No Seizure: `{proba[0]*100:.2f}%`")
+            # SHAP explanation
+            st.subheader("Feature Contribution (SHAP)")
+            explainer = shap.TreeExplainer(model)
+            shap_values = explainer.shap_values(data)
 
-            # Plot confidence chart
-            st.subheader("Confidence Chart:")
-            fig, ax = plt.subplots()
-            ax.barh(["No Seizure", "Seizure"], proba, color=["green", "red"])
-            ax.set_xlim(0, 1)
-            ax.set_xlabel("Probability")
-            st.pyplot(fig)
+            st.set_option('deprecation.showPyplotGlobalUse', False)
+            shap.summary_plot(shap_values[1], data, show=False)
+            st.pyplot(bbox_inches='tight')
 
         else:
             st.error("CSV must have exactly 1 row and 179 columns.")
