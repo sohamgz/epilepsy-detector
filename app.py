@@ -10,12 +10,12 @@ model = joblib.load("epilepsy_model.pkl")
 # ------------------------------
 # Top Section: Epilepsy Info
 # ------------------------------
-st.title("🧠 SeizureNet - Epilepsy Seizure Detection")
+st.title("SeizureNet - Epilepsy Seizure Detection")
 st.markdown("""
 Epilepsy is a neurological disorder that affects brain activity, causing seizures.
 Our app analyzes EEG signals to help detect the likelihood of seizure activity.
 
-📌 **How it works:** Upload a 1-row CSV file with 179 EEG features.
+ **How it works:** Upload a 1-row CSV file with 179 EEG features.
 """)
 
 st.divider()
@@ -34,7 +34,7 @@ if uploaded_file is not None:
             proba = model.predict_proba(data)[0]
             prediction = np.argmax(proba)
 
-            result = "⚠️ Seizure Detected" if prediction == 1 else "✅ No Seizure"
+            result = "Seizure Detected" if prediction == 1 else "No Seizure"
             st.subheader("Prediction Result:")
             st.success(result)
 
