@@ -87,4 +87,62 @@ A minimal interface for:
 ---
 
 ## 📂 Repository Structure
+seizurenet/
+│
+├── model/
+│ └── rf_model.pkl # Trained Random Forest model
+├── data/
+│ └── sample_eeg.csv # Sample EEG file (1x179 format)
+├── app.py # Streamlit interface
+├── requirements.txt # Required Python packages
+├── README.md # Project overview
+└── utils.py # Feature extraction and preprocessing functions
+
+
+---
+
+## 🧠 Uniqueness of the Project
+
+- Focuses on **simplicity + real-time usability**.
+- Minimal setup, **ideal for demonstration**, academic use, or prototyping.
+- Designed for future extension (wearables, deep learning, clinical validation).
+
+---
+
+## 🛠️ Future Scope
+
+- Real-time data from **wearable EEG devices**.
+- **Deep learning** models (e.g., CNN, LSTM) for better performance.
+- **Mobile interface** for portability.
+- **Patient-specific training** for personalized predictions.
+
+---
+
+## 👩‍⚕️ Target Audience
+
+- Biomedical and AI researchers.
+- Students exploring EEG and ML.
+- Clinicians and caregivers seeking seizure prediction tools.
+
+---
+
+## 📜 License
+
+This project is for academic and educational purposes. For clinical or commercial use, further validation and regulatory clearance are required.
+
+---
+
+## 👤 Author
+
+**Soham Shinde**  
+Intern, IEEE EMBS Pune Chapter  
+Mentor: **Dr. Monika Dangore**
+
+---
+
+## 📬 Contact
+
+For queries or collaboration, feel free to reach out via GitHub Issues or email.
+
+
 
