@@ -87,17 +87,14 @@ A minimal interface for:
 ---
 
 ## 📂 Repository Structure
-```bash
+```plaintext
 seizurenet/
-│
-├── model/
-│ └── rf_model.pkl # Trained Random Forest model
-├── data/
-│ └── sample_eeg.csv # Sample EEG file (1x179 format)
-├── app.py # Streamlit interface
-├── requirements.txt # Required Python packages
-├── README.md # Project overview
-└── utils.py # Feature extraction and preprocessing functions
+├── .devcontainer/         # Dev container setup for VS Code or Codespaces
+├── app.py                 # Streamlit interface for EEG upload and prediction
+├── epilepsy_model.pkl     # Trained Random Forest model
+├── requirements.txt       # Python package dependencies
+├── seizure_N.csv          # Sample/test EEG input file (179 features)
+├── README.md              # Project documentation
 
 ```
 ---
