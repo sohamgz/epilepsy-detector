@@ -87,6 +87,7 @@ A minimal interface for:
 ---
 
 ## 📂 Repository Structure
+```bash
 seizurenet/
 │
 ├── model/
