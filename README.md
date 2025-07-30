@@ -99,7 +99,7 @@ seizurenet/
 ├── README.md # Project overview
 └── utils.py # Feature extraction and preprocessing functions
 
-
+```
 ---
 
 ## 🧠 Uniqueness of the Project
